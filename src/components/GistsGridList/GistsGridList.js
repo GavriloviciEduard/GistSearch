@@ -1,7 +1,7 @@
 import React from 'react';
 import Gist from '../Gist/Gist';
 import classes from './GistsGridList.css';
-import { useGlobalContext } from '../../AppProvider';
+import { useGlobalContext } from '../../context';
 require('datejs');
 
 const GistsGridList = () => {

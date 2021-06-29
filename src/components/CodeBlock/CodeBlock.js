@@ -1,32 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import classes from './CodeSnippet.css';
+import classes from './CodeBlock.css';
 import axios from 'axios';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const CodeSnippet = (props) => {
+const CodeBlock = (props) => {
     const [code, setCode] = useState('');
     useEffect(() => {
-        axios.get(props.codeUrl).then((response) => {
+      axios
+        .get(props.codeUrl)
+        .then((response) => {
+          if (response) {
             setCode(response.data);
-        });
+          }
+        })
+        .catch((error) => {});
     }, [props.codeUrl]);
 
     return (
-        <div className={classes.CodeSnippet}>
-            <p>{props.filename}</p>
-            <SyntaxHighlighter
-                showLineNumbers={true}
-                language={
-                    props.language != null ? props.language.toLowerCase() : ''
-                }
-                style={darcula}
-            >
-                {code}
-            </SyntaxHighlighter>
-        </div>
+      <div className={classes.CodeBlock}>
+        <p>{props.filename}</p>
+        <SyntaxHighlighter
+          showLineNumbers={true}
+          language={props.language !== null ? props.language.toLowerCase() : ""}
+          style={darcula}
+        >
+          {code}
+        </SyntaxHighlighter>
+      </div>
     );
 };
 
-export default CodeSnippet;
+export default CodeBlock;

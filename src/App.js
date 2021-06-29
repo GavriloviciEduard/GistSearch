@@ -1,10 +1,9 @@
-import './App.css';
-import SearchBar from "./components/SearchBar/SearchBar";
+import SnippetsRepository from "./containers/SnippetsRepository/SnippetsRepository";
 
 function App() {
   return (
     <div>
-      <SearchBar />
+      <SnippetsRepository />
     </div>
   );
 }

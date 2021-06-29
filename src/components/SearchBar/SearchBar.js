@@ -6,13 +6,19 @@ import axios from "axios";
 const SearchBar = () => {
   const { updateGists, updateUsername } = useGlobalContext();
   const user = useRef("");
+  const instance = axios.create({
+    baseURL: "https://api.github.com/",
+  });
+
+  instance.defaults.headers.common["Authorization"] =
+    "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";
 
   const handleKeyDown = (event) => {
     if (user.current.value === "" || event.key !== "Enter") {
       return;
     }
     updateUsername(user.current.value);
-    axios
+    instance
       .get(`https://api.github.com/users/${user.current.value}/gists`)
       .then((response) => {
         updateGists(response.data);

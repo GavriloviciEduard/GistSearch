@@ -1,0 +1,9 @@
+.SnippetRepository .SearchBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.SnippetRepository .GistList {
+  margin-top: 4em;
+}

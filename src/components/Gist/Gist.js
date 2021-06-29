@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import classes from "./Gist.css";
-import CodeSnippet from "../CodeSnippet/CodeSnippet";
+import CodeBlock from "../CodeBlock/CodeBlock";
 import axios from "axios";
 import { useGlobalContext } from "../../context";
 
 const Gist = (props) => {
   const [forks, setForks] = useState([]);
+  
   useEffect(() => {
     axios.get(props.forksUrl).then((response) => {
       setForks(response.data);
@@ -42,7 +43,7 @@ const Gist = (props) => {
       <div className={classes.snippets}>
         {props.files.map((item, index) => {
           return (
-            <CodeSnippet
+            <CodeBlock
               key={index}
               filename={item.filename}
               language={item.language}
