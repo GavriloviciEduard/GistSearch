@@ -1,0 +1,32 @@
+.SearchBar {
+  display: flex;
+  padding: 0.5em 1em;
+  width: 100% - 1em;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-color: #333333;
+}
+
+.SearchContent {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 50%;
+}
+
+.SearchContent p {
+  color: white;
+  font-weight: 600;
+}
+
+.SearchContent input {
+  height: 2em;
+  border-radius: 0.7em;
+  padding: 0 0.5em;
+  background-color: #515661;
+  color: white;
+}
+
+.SearchContent input:focus {
+  outline: none;
+}
