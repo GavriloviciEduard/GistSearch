@@ -20,6 +20,7 @@ const CodeBlock = (props) => {
 
     return (
       <div className={classes.CodeBlock}>
+        <p>{props.language}</p>
         <p>{props.filename}</p>
         <SyntaxHighlighter
           showLineNumbers={true}
