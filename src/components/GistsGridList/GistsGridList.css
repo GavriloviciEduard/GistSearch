@@ -1,0 +1,10 @@
+.GistsGridList {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin-top: 2em;
+}
