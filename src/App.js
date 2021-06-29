@@ -1,7 +1,11 @@
-import './App.css';
+import SnippetsRepository from "./containers/SnippetsRepository/SnippetsRepository";
 
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <SnippetsRepository />
+    </div>
+  );
 }
 
 export default App;

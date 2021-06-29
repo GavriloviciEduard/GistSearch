@@ -1,0 +1,64 @@
+.Gist {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 100%;
+  max-width: 100%;
+  border-radius: 0.7em;
+  background-color: #212121;
+}
+
+.Gist .header h2 {
+  color: white;
+  padding: 0.5em;
+}
+
+.Gist .header p {
+  color: white;
+  padding: 0.2em 0.7em;
+}
+
+.Gist .header .information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Gist .header .information .ownerInformation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7em 0.7em 0em 0.7em;
+}
+
+.Gist .header .information .ownerInformation img {
+  border-radius: 50%;
+  height: 3.5em;
+  width: 3.5em;
+}
+
+.Gist .header .information .ownerInformation p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Gist .header .information .forkInformation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7em 0.7em 0em 0.7em;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 13em;
+}
+
+.Gist .header .information .forkInformation img {
+  border-radius: 50%;
+  height: 3.5em;
+  width: 3.5em;
+}
+
+.Gist .snippets {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
