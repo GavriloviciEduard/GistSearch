@@ -1,0 +1,12 @@
+.CodeBlock {
+  color: white;
+  border-radius: 0.7em;
+  padding: 1em;
+  margin: 1em;
+  background-color: #202532;
+}
+
+.CodeBlock p {
+  font-style: italic;
+  color: tan;
+}
