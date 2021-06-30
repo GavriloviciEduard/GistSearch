@@ -10,7 +10,7 @@ also the avatars for the last 3 forks are shown. The user can also acces the gis
 ![2](https://github.com/GavriloviciEduard/GistSearch/blob/develop/doc/test2.PNG)
 
 # Future Improvements
-* Imrprove UI/UX.
+* Improve UI/UX.
 * Show more relevant data related to gists.
 * Improve appliciation architecture.
 * Sort gists (date, language, number of forks etc.)
