@@ -11,7 +11,7 @@ const SearchBar = () => {
   });
 
   instance.defaults.headers.common["Authorization"] =
-    "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";
+    "";
 
   const handleKeyDown = (event) => {
     if (user.current.value === "" || event.key !== "Enter") {
